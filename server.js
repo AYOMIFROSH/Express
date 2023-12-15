@@ -9,7 +9,7 @@ const ServiceTime = (req, res, next) => {
     const dayOfWeek = date.getDay();
     const hourOfDay = date.getHours();
 
-    if (dayOfWeek >= 1 && dayOfWeek <= 5 && hourOfDay >= 9 && hourOfDay < 23) {
+    if (dayOfWeek >= 1 && dayOfWeek <= 5 && hourOfDay >= 9 && hourOfDay < 17) {
         next();
     } else {
         res.send('<h1>Sorry, we are always open by (Monday to Friday, from 9 to 17).</h1>');
